@@ -10,7 +10,7 @@ use ifteam\SimpleArea\database\area\AreaSection;
 
 class Main extends PluginBase implements Listener{
 	
-	const TAG = "§b§o[ 서버 ] §7";
+	const TAG = "§b§o[ Info ] §7";
 	public $area;
 	
  	 public function onEnable(){
