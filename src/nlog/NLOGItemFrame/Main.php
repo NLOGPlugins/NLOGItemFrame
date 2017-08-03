@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener{
  	 					if ($this->getServer()->getLanguage()->getName() === "kor") {
  	 						$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 					}else{
- 	 						$this->getLogger()->info(self::TAG."You can't get item from item frame");
+ 	 						$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
  	 					}
  	 				}
  	 			}else{
@@ -51,7 +51,7 @@ class Main extends PluginBase implements Listener{
  	 				if ($this->getServer()->getLanguage()->getName() === "kor") {
  	 					$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 				}else{
- 	 					$this->getLogger()->info(self::TAG."You can't get item from item frame");
+ 	 					$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
  	 				}
  	 			}
  	 		}else{
@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener{
  	 			if ($this->getServer()->getLanguage()->getName() === "kor") {
  	 				$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 			}else{
- 	 				$this->getLogger()->info(self::TAG."You can't get item from item frame");
+ 	 				$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
  	 			}
  	 		}
  	 	}
