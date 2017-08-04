@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
  	 			if ($areaSection instanceof AreaSection) {
  	 				if(!$areaSection->isResident($ev->getPlayer()->getName())) {
  	 					$ev->setCancelled(true);
- 	 					if ($this->getServer()->getLanguage()->getName() === "kor") {
+ 	 					if ($this->getServer()->getLanguage()->getLang() === "kor") {
  	 						$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 					}else{
  	 						$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener{
  	 				}
  	 			}else{
  	 				$ev->setCancelled(true);
- 	 				if ($this->getServer()->getLanguage()->getName() === "kor") {
+ 	 				if ($this->getServer()->getLanguage()->getLang() === "kor") {
  	 					$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 				}else{
  	 					$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener{
  	 			}
  	 		}else{
  	 			$ev->setCancelled(true);
- 	 			if ($this->getServer()->getLanguage()->getName() === "kor") {
+ 	 			if ($this->getServer()->getLanguage()->getLang() === "kor") {
  	 				$ev->getPlayer()->sendMessage(self::TAG."액자 내의 아이템을 뺄 수 없습니다.");
  	 			}else{
  	 				$ev->getPlayer()->sendMessage(self::TAG."You can't get item from item frame");
