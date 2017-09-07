@@ -16,7 +16,7 @@ class Main extends PluginBase implements Listener{
  	 public function onEnable(){
     	$this->getServer()->getPluginManager()->registerEvents($this, $this);
     	
-    	if ($this->getServer()->getPluginManager()->getPlugin("SimpleArea") == null) {
+    	if ($this->getServer()->getPluginManager()->getPlugin("SimpleArea") === null) {
     		$this->getLogger()->notice("SimpleArea가 없습니다. SimpleArea 호환 모드를 종료합니다.");
     		$this->getLogger()->notice("SimpleArea doesn't exist. SimpleArea compatibility mode turn off.");
     		$this->area = false;
