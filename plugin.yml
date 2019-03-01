@@ -1,7 +1,7 @@
 ---
 name: NLOGItemFrame
 main: nlog\NLOGItemFrame\Main
-version: 1.000000
+version: 1.0
 author: nlog
 api:
 - 4.0.0
