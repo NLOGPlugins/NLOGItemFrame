@@ -36,22 +36,22 @@ class Main extends PluginBase implements Listener {
     public function onDropItem(DataPacketReceiveEvent $ev) {
         /** @var ItemFrameDropItemPacket $pk */
         if (($pk = $ev->getPacket()) instanceof ItemFrameDropItemPacket) {
-            if (!$ev->getPlayer()->isOp()) {
+            if (!$ev->getOrigin()->getPlayer()->isOp()) {
                 if ($this->area) {
-                    $areaSection = AreaProvider::getInstance()->getArea($ev->getPlayer()->getLevel(), $pk->x, $pk->z);
+                    $areaSection = AreaProvider::getInstance()->getArea($ev->getOrigin()->getPlayer()->getLevel(), $pk->x, $pk->z);
                     if ($areaSection instanceof AreaSection) {
                         if (!$areaSection->isResident($ev->getPlayer()->getName())) {
                             $ev->setCancelled(true);
-                            $ev->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
+                            $ev->getOrigin()->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
 
                         }
                     } else {
                         $ev->setCancelled(true);
-                        $ev->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
+                        $ev->getOrigin()->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
                     }
                 } else {
                     $ev->setCancelled(true);
-                    $ev->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
+                    $ev->getOrigin()->getPlayer()->sendMessage(self::TAG . "액자 내의 아이템을 뺄 수 없습니다.");
                 }
             }
 
